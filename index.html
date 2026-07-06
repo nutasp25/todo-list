@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список задач</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+
+            <h1>📋 Список задач</h1>
+
+            <button id="themeButton" class="theme-button">
+                🌙
+            </button>
+
+        </header>
+
+        <section class="statistics">
+
+            <div class="stat-card" data-type="today">
+
+                <span class="emoji">📅</span>
+
+                <div>
+
+                    <h3>Сегодня</h3>
+
+                    <p id="todayCount">0</p>
+
+                </div>
+
+            </div>
+
+            <div class="stat-card" data-type="all">
+
+                <span class="emoji">📋</span>
+
+                <div>
+
+                    <h3>Все</h3>
+
+                    <p id="allCount">0</p>
+
+                </div>
+
+            </div>
+
+            <div class="stat-card" data-type="completed">
+
+                <span class="emoji">✅</span>
+
+                <div>
+
+                    <h3>Выполнено</h3>
+
+                    <p id="completedCount">0</p>
+
+                </div>
+
+            </div>
+
+            <div class="stat-card" data-type="active">
+
+                <span class="emoji">🔥</span>
+
+                <div>
+
+                    <h3>Активные</h3>
+
+                    <p id="activeCount">0</p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="search">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="🔍 Поиск задачи">
+
+        </section>
+
+        <section class="task-form">
+
+            <input
+                type="text"
+                id="taskInput"
+                placeholder="Название задачи">
+
+            <input
+                type="date"
+                id="taskDate">
+
+            <div class="priority">
+
+                <button class="priority-btn active" data-priority="low">
+                    🟢 Низкий
+                </button>
+
+                <button class="priority-btn" data-priority="medium">
+                    🟡 Средний
+                </button>
+
+                <button class="priority-btn" data-priority="high">
+                    🔴 Высокий
+                </button>
+
+            </div>
+
+            <button id="addButton" class="add-button">
+                Добавить задачу
+            </button>
+
+        </section>
+
+        <section>
+
+            <ul id="taskList"></ul>
+
+        </section>
+
+        <button id="deletedButton" class="deleted-button">
+            🗑 Недавно удаленные
+        </button>
+
+    </div>
+
+    <div id="modal" class="modal">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+
+                <h2 id="modalTitle"></h2>
+
+                <button id="closeModal">
+                    ✕
+                </button>
+
+            </div>
+
+            <div id="modalBody"></div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
